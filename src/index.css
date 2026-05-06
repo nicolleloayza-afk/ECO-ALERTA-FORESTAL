@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@600;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-display: "Outfit", sans-serif;
+
+  --color-brand-primary: #064E3B; /* Deep Emerald */
+  --color-brand-warning: #f59e0b;
+  --color-brand-critical: #991B1B; /* Dark Red */
+  --color-background-soft: #E5E7EB; /* Light Gray background */
+  
+  --shadow-immersive: 0 20px 50px rgba(0, 0, 0, 0.1);
+  --shadow-alert: 0 20px 50px rgba(153, 27, 27, 0.4);
+}
+
+@layer base {
+  body {
+    @apply bg-background-soft text-slate-900 font-sans h-screen overflow-hidden;
+  }
+}
+
+@layer components {
+  .immersive-card {
+    @apply bg-white rounded-xl shadow-immersive border border-gray-300 overflow-hidden flex flex-col;
+  }
+  
+  .immersive-button {
+    @apply w-full bg-brand-primary text-white py-2 rounded text-[10px] font-bold uppercase tracking-wider transition-all hover:brightness-110 active:scale-[0.98];
+  }
+
+  .immersive-header-label {
+    @apply bg-gray-100 p-3 border-b border-gray-200 font-black text-[10px] uppercase text-gray-500 tracking-tighter;
+  }
+
+  .danger-pattern {
+    background: repeating-linear-gradient(
+      -45deg,
+      #facc15,
+      #facc15 10px,
+      #000 10px,
+      #000 20px
+    );
+    background-size: 40px 40px;
+    animation: move-bg 2s linear infinite;
+  }
+
+  @keyframes move-bg {
+    from { background-position: 0 0; }
+    to { background-position: 40px 0; }
+  }
+}

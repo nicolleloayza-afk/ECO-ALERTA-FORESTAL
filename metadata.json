@@ -1,0 +1,12 @@
+{
+  "name": "EcoAlerta",
+  "description": "Sistema de monitoreo ambiental y alerta temprana de incendios.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "Real-time monitoring",
+    "Emergency response protocols",
+    "Sensor data visualization"
+  ]
+}
