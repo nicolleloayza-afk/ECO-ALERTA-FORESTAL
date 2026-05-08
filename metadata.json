@@ -1,6 +1,6 @@
 {
   "name": "EcoAlerta",
-  "description": "Sistema de monitoreo ambiental y alerta temprana de incendios.",
+  "description": "EcoAlerta: Escuchando al bosque antes del fuego. Sistema de monitoreo ambiental y alerta temprana de incendios para la protección forestal en tiempo real.",
   "requestFramePermissions": [
     "geolocation"
   ],

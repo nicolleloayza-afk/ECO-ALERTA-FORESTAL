@@ -27,11 +27,11 @@ export const Login: React.FC<LoginProps> = ({ onLogin }) => {
             <div className="inline-flex p-4 rounded-full bg-emerald-50 border border-emerald-100 mb-2">
               <Fingerprint className="w-10 h-10 text-brand-primary" />
             </div>
-            <h1 className="text-2xl font-display font-black tracking-tighter uppercase italic text-brand-primary">
-              EcoAlerta
+            <h1 className="text-3xl font-display font-black tracking-tighter uppercase italic bg-gradient-to-r from-emerald-800 to-emerald-600 bg-clip-text text-transparent drop-shadow-sm leading-none">
+              Iniciar Sesión
             </h1>
-            <p className="text-[10px] text-gray-400 font-bold uppercase tracking-[0.2em]">
-              Vigilancia Ambiental • V.2.1.0
+            <p className="text-[10px] text-brand-primary/60 font-black uppercase tracking-tight italic pt-2">
+              Acceso autorizado al Centro Regional de Monitoreo
             </p>
           </div>
 
@@ -40,28 +40,38 @@ export const Login: React.FC<LoginProps> = ({ onLogin }) => {
             className="space-y-4"
           >
             <div className="space-y-1">
-              <label className="text-[10px] font-black uppercase text-gray-400 ml-1">Identificador de Operador</label>
+              <label className="text-[10px] font-black uppercase text-gray-400 ml-1">🏛️ Municipalidad / Institución</label>
               <div className="relative">
                 <input 
                   type="text" 
-                  className="w-full bg-gray-50 border border-gray-200 rounded-lg py-3 px-10 text-sm font-mono focus:ring-2 focus:ring-brand-primary/20 outline-none transition-all"
-                  placeholder="ID-USER-XXXX"
+                  className="w-full bg-gray-50 border border-gray-200 rounded-lg py-3 px-4 text-sm font-bold focus:ring-2 focus:ring-brand-primary/20 outline-none transition-all"
+                  placeholder="Ej. Municipalidad Distrital de Majes"
                   required
                 />
-                <Shield className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-300" />
               </div>
             </div>
 
             <div className="space-y-1">
-              <label className="text-[10px] font-black uppercase text-gray-400 ml-1">Pin de Seguridad (GPRS-KEY)</label>
+              <label className="text-[10px] font-black uppercase text-gray-400 ml-1">👤 Usuario institucional</label>
+              <div className="relative">
+                <input 
+                  type="text" 
+                  className="w-full bg-gray-50 border border-gray-200 rounded-lg py-3 px-4 text-sm font-mono focus:ring-2 focus:ring-brand-primary/20 outline-none transition-all"
+                  placeholder="Ingrese su usuario"
+                  required
+                />
+              </div>
+            </div>
+
+            <div className="space-y-1">
+              <label className="text-[10px] font-black uppercase text-gray-400 ml-1">Contraseña de Red</label>
               <div className="relative">
                 <input 
                   type="password" 
-                  className="w-full bg-gray-50 border border-gray-200 rounded-lg py-3 px-10 text-sm font-mono focus:ring-2 focus:ring-brand-primary/20 outline-none transition-all"
+                  className="w-full bg-gray-50 border border-gray-200 rounded-lg py-3 px-4 text-sm font-mono focus:ring-2 focus:ring-brand-primary/20 outline-none transition-all"
                   placeholder="••••••••"
                   required
                 />
-                <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-300" />
               </div>
             </div>
 
@@ -69,7 +79,7 @@ export const Login: React.FC<LoginProps> = ({ onLogin }) => {
               type="submit"
               className="immersive-button flex items-center justify-center gap-2 group h-12 text-xs"
             >
-              Iniciar Sincronización
+              Acceder al Sistema
               <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </button>
           </form>

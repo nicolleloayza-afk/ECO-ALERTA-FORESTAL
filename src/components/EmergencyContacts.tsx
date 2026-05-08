@@ -1,6 +1,6 @@
 import React from 'react';
 import { Phone, MessageSquare, MapPin, ArrowLeft, Send } from 'lucide-react';
-import { View, Contact } from '../types';
+import { View, Contact, NodeData } from '../types';
 
 interface EmergencyContactsProps {
   onBack: () => void;
